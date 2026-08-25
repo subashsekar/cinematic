@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-void: #050505;
+  --color-ink: #0d0b0c;
+  --color-charcoal: #161214;
+  --color-ivory: #f2ebe1;
+  --color-champagne: #cbb089;
+  --color-champagne-soft: #d9c3a1;
+  --color-burgundy: #4a1f28;
+  --color-burgundy-soft: #6b3340;
+  --color-wine: #3a151c;
+  --color-rose-mute: #9a7474;
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-void);
+    color: var(--color-ivory);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--color-void);
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
+
+  #root {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-champagne) 32%, transparent);
+    color: var(--color-ivory);
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .film-grain {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .light-bloom {
+    background: radial-gradient(
+      circle,
+      color-mix(in srgb, var(--color-champagne) 48%, transparent) 0%,
+      color-mix(in srgb, var(--color-champagne) 14%, transparent) 32%,
+      transparent 70%
+    );
+  }
+
+  .soft-vignette {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 28%,
+      color-mix(in srgb, var(--color-void) 78%, transparent) 100%
+    );
+  }
+
+  .cinematic-mask {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+  }
+
+  .section-seam {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      color-mix(in srgb, var(--color-burgundy) 18%, transparent),
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
