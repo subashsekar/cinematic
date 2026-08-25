@@ -9,6 +9,7 @@ import { Hero } from './components/Hero'
 import { LoveLetter } from './components/LoveLetter'
 import { Memories } from './components/Memories'
 import { MusicPlayer } from './components/MusicPlayer'
+import { PetNames } from './components/PetNames'
 import { SectionBreath } from './components/SectionBreath'
 import { ThankYou } from './components/ThankYou'
 import { VideoMoments } from './components/VideoMoments'
@@ -27,6 +28,7 @@ export default function App() {
         <Beginning />
         <SectionBreath />
         <ThankYou />
+        <PetNames />
         <SectionBreath />
         <Memories />
         <VideoMoments />

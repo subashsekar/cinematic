@@ -143,7 +143,7 @@ export function Hero() {
         <AnimatePresence>
           {show('name') && (
             <motion.h1
-              className="flex flex-wrap justify-center font-display text-[clamp(4rem,16vw,10rem)] font-light leading-none tracking-[0.32em] text-ivory drop-shadow-[0_8px_40px_rgba(0,0,0,0.55)]"
+              className="flex flex-nowrap justify-center whitespace-nowrap font-display text-[clamp(2.4rem,11vw,10rem)] font-light leading-none tracking-[0.14em] text-ivory drop-shadow-[0_8px_40px_rgba(0,0,0,0.55)] sm:tracking-[0.28em]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -167,9 +167,23 @@ export function Hero() {
         </AnimatePresence>
 
         <AnimatePresence>
+          {show('name') && (
+            <motion.p
+              key="pattu"
+              className="mt-4 font-display text-[clamp(1.05rem,3.5vw,1.45rem)] font-light tracking-[0.18em] text-champagne-soft/90"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.1, delay: 0.35, ease: easing }}
+            >
+              pattu🤍
+            </motion.p>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
           {show('date') && (
             <motion.p
-              className="mt-12 whitespace-nowrap font-display text-[clamp(1.1rem,3.8vw,2.2rem)] tracking-[0.28em] text-champagne sm:tracking-[0.36em]"
+              className="mt-10 whitespace-nowrap font-display text-[clamp(1.05rem,3.6vw,2.2rem)] tracking-[0.22em] text-champagne sm:mt-12 sm:tracking-[0.36em]"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.4, ease: easing }}
