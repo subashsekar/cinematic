@@ -20,14 +20,14 @@ export function LoveLetter() {
     <section id="letter" ref={ref} className="relative overflow-hidden px-6 py-32 sm:py-40">
       <GlassOrb className="top-[18%] right-[7%]" size={38} opacity={0.2} />
       <LightRibbon className="bottom-[14%] left-[5%]" opacity={0.16} />
-      <motion.div className="absolute inset-0 opacity-25" style={{ y: bgY }}>
+      <motion.div className="absolute inset-0 opacity-40" style={{ y: bgY }}>
         <img
           src={FINAL_PHOTO.src}
           alt=""
           aria-hidden
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-void via-void/85 to-void" />
+        <div className="absolute inset-0 bg-gradient-to-b from-void/90 via-void/70 to-void/90" />
       </motion.div>
 
       <div className="relative z-10 mx-auto max-w-2xl">
