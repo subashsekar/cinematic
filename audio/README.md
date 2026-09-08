@@ -1,10 +1,9 @@
 # Audio
 
-Place the soundtrack here as:
+The site uses:
 
 ```text
-public/audio/soundtrack.mp3
+public/audio/cinematic.mp3
 ```
 
-The site already uses `soundtrack.mp3` (copied from your Chinna Gounder song file).
 Music is user-initiated and pauses automatically when any video plays.
