@@ -4,7 +4,7 @@ import { easing } from '../content/story'
 import { asset } from '../lib/asset'
 import { onPauseSiteMusic } from '../lib/musicBus'
 
-const AUDIO_SRC = asset('audio/soundtrack.mp3')
+const AUDIO_SRC = asset('audio/cinematic.mp3')
 
 export function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
